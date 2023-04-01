@@ -1,4 +1,4 @@
 export {myMutation} from "./myMutation"
 export {createTodo} from "./createTodo"
-export {markTodo} from "./markTodo"
+export {updateToDo} from "./updateToDo"
 export {deleteTodo} from "./deleteTodo"

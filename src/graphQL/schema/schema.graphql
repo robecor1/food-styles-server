@@ -11,6 +11,13 @@ type Mutation {
 }
 
 type Query {
-  listTodos: String
+  listTodos: [ToDo]
   myQuery: String
+}
+
+type ToDo {
+  id: ID
+  title: String
+  completed: Boolean
+  userId: ID
 }
