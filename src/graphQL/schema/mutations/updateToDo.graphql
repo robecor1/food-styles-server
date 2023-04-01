@@ -1,3 +1,11 @@
 type Mutation {
-    updateToDo: String
+    updateToDo(input: updateToDoInput!): updateToDoOutput
+}
+
+input updateToDoInput {
+    completed: Boolean!
+}
+
+type updateToDoOutput {
+    success: Boolean
 }

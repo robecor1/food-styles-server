@@ -1,3 +1,7 @@
 type Mutation {
-    deleteTodo: String
+    deleteTodo(id: ID!): deleteToDoOutput
+}
+
+type deleteToDoOutput {
+    success: Boolean
 }

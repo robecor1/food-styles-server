@@ -1,3 +1,3 @@
-export const updateToDo = () => {
-  return 'updateToDo'
+export const updateToDo = (input: any) => {
+  return {success: true}
 }

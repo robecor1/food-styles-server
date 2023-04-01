@@ -1,3 +1,3 @@
 export const deleteTodo = () => {
-  return 'deleteTodo'
+  return {success: true}
 }

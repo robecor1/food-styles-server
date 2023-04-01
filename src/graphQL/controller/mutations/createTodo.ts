@@ -1,3 +1,3 @@
-export const createTodo = () => {
-  return 'createTodo'
+export const createTodo = (input: any) => {
+  return {success: true}
 }
