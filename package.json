@@ -4,9 +4,9 @@
   "description": "Food Styles GraphQL backend API",
   "main": "build/app/index.js",
   "scripts": {
-    "start": "nodemon ./build/app/index.js",
+    "start": "nodemon ./dist/index.js",
     "build": "webpack",
-    "build-start": "yarn build && yarn start",
+    "build-start": "yarn schema:build && yarn build && yarn start",
     "lint": "eslint './**/*.ts'",
     "schema:build": "graphql-schema-utilities -d -s './src/graphQL/schema/{queries,mutations}/*.graphql' -o ./src/graphQL/schema/schema.graphql"
   },
