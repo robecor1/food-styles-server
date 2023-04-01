@@ -20,9 +20,5 @@
   "include": ["./**/*.ts"],
   "exclude": [
     "node_modules",
-    ".aws-sam/",
-    ".webpack/",
-    ".vscode/",
-    "utils/mock-factories/**"
   ]
 }
