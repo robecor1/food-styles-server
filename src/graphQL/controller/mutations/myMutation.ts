@@ -1,3 +1,3 @@
 export const myMutation = () => {
-  console.log('myMutation')
+  return 'myMutation'
 }

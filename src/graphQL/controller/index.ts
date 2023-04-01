@@ -1,11 +1,7 @@
-import {myQuery} from './queries/myQuery'
-import {myMutation} from './mutations/myMutation'
+import * as queries from './queries'
+import * as mutations from './mutations'
 
 export const controller = {
-  Query: {
-    myQuery
-  },
-  Mutation: {
-    myMutation
-  }
+  ...queries,
+  ...mutations
 };

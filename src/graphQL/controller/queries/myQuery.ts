@@ -1,3 +1,3 @@
 export const myQuery = () => {
-  console.log('myQuery')
+  return 'myQuery'
 }

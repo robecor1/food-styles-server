@@ -1,0 +1,1 @@
+export {myMutation} from "./myMutation"

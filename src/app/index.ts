@@ -11,6 +11,11 @@ app.use(
     schema: schema,
     rootValue: controller,
     graphiql: true,
+    cacheControl: {
+      defaultMaxAge: 0,
+      stripFormattedExtensions: false,
+      calculateHttpHeaders: false,
+    },
   })
 );
 

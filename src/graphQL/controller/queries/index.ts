@@ -1,0 +1,1 @@
+export {myQuery} from "./myQuery"
