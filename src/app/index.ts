@@ -1,5 +1,5 @@
-import {schema} from '../grapgQL/schema'
-import {controller} from '../grapgQL/controller'
+import {schema} from '../graphQL/schema'
+import {controller} from '../graphQL/controller'
 
 const express = require('express');
 const { graphqlHTTP } = require('express-graphql');

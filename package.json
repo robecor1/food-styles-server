@@ -8,7 +8,8 @@
     "build": "tsc",
     "build-start": "yarn build && yarn start",
     "test": "test\\",
-    "lint": "eslint './**/*.ts'"
+    "lint": "eslint './**/*.ts'",
+    "schema:build": "graphql-schema-utilities -d -s './src/graphQL/schema/{queries,mutations}/*.graphql' -o ./src/graphQL/schema/schema.graphql"
   },
   "repository": "git+https://github.com/robecor1/food-styles-server.git",
   "author": "Corolea Robert Cozmin",
@@ -24,6 +25,8 @@
     "express": "^4.18.2",
     "express-graphql": "^0.12.0",
     "graphql": "^16.6.0",
+    "graphql-schema-utilities": "^1.1.6",
+    "graphql-tag": "^2.12.6",
     "path": "^0.12.7",
     "prettier": "^2.8.7",
     "sequelize": "^6.30.0",
