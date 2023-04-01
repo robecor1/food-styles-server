@@ -1,0 +1,7 @@
+type Mutation {
+    deleteTodo(id: ID!): deleteToDoOutput
+}
+
+type deleteToDoOutput {
+    success: Boolean
+}

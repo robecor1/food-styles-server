@@ -1,0 +1,6 @@
+type ToDo {
+    id: ID!
+    title: String!
+    completed: Boolean!
+    userId: ID
+}

@@ -4,9 +4,20 @@ schema {
 }
 
 type Mutation {
+  createTodo: String
+  deleteTodo: String
+  markTodo: String
   myMutation: String
 }
 
 type Query {
+  listTodos: [ToDo]
   myQuery: String
+}
+
+type ToDo {
+  id: ID
+  title: String
+  completed: Boolean
+  userId: ID
 }

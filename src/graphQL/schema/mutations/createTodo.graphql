@@ -1,0 +1,11 @@
+type Mutation {
+    createTodo(input: createToDoInput!): CreateToDoOutput!
+}
+
+input createToDoInput {
+    title: String!
+}
+
+type CreateToDoOutput {
+    success: Boolean
+}

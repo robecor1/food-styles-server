@@ -1,0 +1,11 @@
+type Mutation {
+    updateToDo(input: updateToDoInput!): updateToDoOutput
+}
+
+input updateToDoInput {
+    completed: Boolean!
+}
+
+type updateToDoOutput {
+    success: Boolean
+}
