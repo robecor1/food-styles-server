@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "preserveConstEnums": true,
+    "strictNullChecks": true,
+    "inlineSources": true,
+    "inlineSourceMap": true,
+    "sourceRoot": "/",
+    "target": "es2019",
+    "skipLibCheck": true,
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "lib": ["es2020"],
+    "rootDir": "./src",
+    "outDir": "build"
+  },
+  "include": ["./**/*.ts"],
+  "exclude": [
+    "node_modules",
+    ".aws-sam/",
+    ".webpack/",
+    ".vscode/",
+    "utils/mock-factories/**"
+  ]
+}

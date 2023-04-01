@@ -1,0 +1,23 @@
+{
+  "name": "food-styles-server",
+  "version": "1.0.0",
+  "description": "Food Styles GraphQL backend API",
+  "main": "index.js",
+  "scripts": {
+    "test": "test\\"
+  },
+  "repository": "git+https://github.com/robecor1/food-styles-server.git",
+  "author": "Corolea Robert Cozmin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robecor1/food-styles-server/issues"
+  },
+  "homepage": "https://github.com/robecor1/food-styles-server#readme",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "graphql": "^16.6.0",
+    "typescript": "^5.0.3"
+  }
+}
