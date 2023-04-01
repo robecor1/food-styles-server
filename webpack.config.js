@@ -1,10 +1,18 @@
 const path = require('path');
 
 module.exports = {
-  entry: './build/app/index.js',
+  entry: './src/app/index.ts',
+  mode: "development",
+  target: 'node',
   output: {
-    filename: 'bundle.js',
+    filename: 'index.js',
     path: path.resolve(__dirname, 'dist')
+  },
+  resolve: {
+    extensions: [".mjs", ".json", ".ts", ".js"],
+    modules: [
+      "node_modules"
+    ],
   },
   module: {
     rules: [
@@ -16,6 +24,10 @@ module.exports = {
           transpileOnly: true,
         },
       },
+      {
+        test: /\.graphql?$/,
+        loader: 'webpack-graphql-loader'
+      }
     ],
   },
 };
