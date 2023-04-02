@@ -13,3 +13,6 @@ Each time you modify the `*.graphql` files run `yarn schema:codegen` to generate
 ## App build and running
 `yarn build-start` can be used to build and start the application.
 In order for file changes to take effect for the app you can run `yarn build` while the server is running.
+
+### TODO
+Add watcher to run the build script while they are edited.
