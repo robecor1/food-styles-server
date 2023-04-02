@@ -76,6 +76,7 @@ export type DeleteToDoOutput = {
 
 export type UpdateToDoInput = {
   completed: Scalars['Boolean'];
+  id?: InputMaybe<Scalars['ID']>;
 };
 
 export type UpdateToDoOutput = {

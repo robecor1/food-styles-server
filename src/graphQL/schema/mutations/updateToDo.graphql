@@ -3,6 +3,7 @@ type Mutation {
 }
 
 input updateToDoInput {
+    id: ID
     completed: Boolean!
 }
 

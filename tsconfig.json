@@ -9,7 +9,7 @@
     "inlineSources": true,
     "inlineSourceMap": true,
     "sourceRoot": "/",
-    "target": "es6",
+    "target": "es2019",
     "skipLibCheck": true,
     "module": "commonjs",
     "esModuleInterop": true,

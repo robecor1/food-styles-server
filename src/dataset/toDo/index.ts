@@ -1,64 +1,50 @@
-import { Model, DataTypes } from 'sequelize';
+import { DataTypes } from 'sequelize';
 import { sequelize } from '../database';
 
-export class Todo extends Model {
-  public id!: number;
-  public title!: string;
-  public completed!: boolean;
+export const ToDo = sequelize.define('ToDo', {
+  id: {
+    type: DataTypes.INTEGER.UNSIGNED,
+    autoIncrement: true,
+    primaryKey: true,
+  },
+  title: {
+    type: DataTypes.STRING(128),
+    allowNull: false,
+  },
+  completed: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
+    allowNull: false,
+  },
+})
 
-  static async createTodo(
-    title: string,
-    completed: boolean
-  ): Promise<Todo> {
-    return await Todo.create({ title, completed });
-  }
-
-  static async updateTodo(
-    id: number,
-    completed: boolean
-  ): Promise<Todo | null> {
-    const [numRows, [updatedTodo]] = await Todo.update(
-      { completed },
-      {
-        where: { id },
-        returning: true,
-      }
-    );
-    return numRows === 0 ? null : updatedTodo;
-  }
-
-  async deleteTodo(id: number): Promise<boolean> {
-    const numRows = await Todo.destroy({
-      where: { id },
-    });
-    return numRows > 0;
-  }
-
-  async listTodos(filter: {completed: boolean}): Promise<Todo[]> {
-    return await Todo.findAll(Object.keys(filter) ? {where: filter}: undefined);
-  }
-
+export const createTodo = async (title: string): Promise<any> => {
+  return await ToDo.create({ title });
 }
 
-Todo.init(
-  {
-    id: {
-      type: DataTypes.INTEGER.UNSIGNED,
-      autoIncrement: true,
-      primaryKey: true,
-    },
-    title: {
-      type: DataTypes.STRING(128),
-      allowNull: false,
-    },
-    completed: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false,
-      allowNull: false,
-    },
-  },
-  {
-    sequelize,
-    tableName: 'todos',
-  }
-);
+export const listTodos = async (filter?: {completed: boolean}): Promise<any[]> => {
+  return await ToDo.findAll(filter && Object.keys(filter).length ? {where: filter}: undefined);
+}
+
+export const updateTodo = async (
+    id: number,
+    { completed } : {completed: boolean}
+  ): Promise<any | null> => {
+  console.log(1);
+  const [numRows, [updatedTodo]] = await ToDo.update(
+    { completed },
+    {
+      where: { id },
+      returning: true,
+    }
+  );
+  console.log(2);
+  return numRows === 0 ? null : updatedTodo;
+}
+
+export const deleteTodo = async (id: number): Promise<boolean> => {
+  const numRows = await ToDo.destroy({
+    where: { id },
+  });
+  return numRows > 0;
+}
