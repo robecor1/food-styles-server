@@ -1,9 +1,9 @@
-import {ListToDoInput} from "../../schema/@types";
+import {ListToDoInput, ToDo} from "../../schema/@types";
 
-export const listTodos = (input: ListToDoInput) => {
+export const listTodos = (input: ListToDoInput): ToDo[] => {
   return [{
     id: 1,
     title: "title",
     completed: true
-  }]
+  }] as ToDo[]
 }
