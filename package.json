@@ -8,7 +8,7 @@
     "build": "webpack",
     "build-start": "yarn build && yarn start",
     "lint": "eslint './**/*.ts'",
-    "schema:build": "graphql-schema-utilities -d -s './src/graphQL/schema/{types,queries,mutations}/*.graphql' -o ./src/graphQL/schema/schema.graphql"
+    "schema:codegen": "graphql-codegen --config codegen.yml"
   },
   "repository": "git+https://github.com/robecor1/food-styles-server.git",
   "author": "Corolea Robert Cozmin",
@@ -36,6 +36,9 @@
     "typescript": "^5.0.3"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "3.2.2",
+    "@graphql-codegen/typescript": "3.0.2",
+    "@graphql-codegen/typescript-resolvers": "3.1.1",
     "webpack": "^5.77.0",
     "webpack-cli": "^5.0.1",
     "webpack-graphql-loader": "^1.0.2"
