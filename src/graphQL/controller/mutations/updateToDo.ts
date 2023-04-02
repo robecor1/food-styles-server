@@ -1,3 +1,5 @@
-export const updateToDo = (input: any) => {
+import {UpdateToDoInput, UpdateToDoOutput} from "../../schema/@types";
+
+export const updateToDo = (input: UpdateToDoInput): UpdateToDoOutput => {
   return {success: true}
 }
