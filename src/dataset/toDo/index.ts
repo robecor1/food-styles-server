@@ -30,16 +30,13 @@ export const updateTodo = async (
     id: number,
     { completed } : {completed: boolean}
   ): Promise<any | null> => {
-  console.log(1);
-  const [numRows, [updatedTodo]] = await ToDo.update(
+  const numRows = await ToDo.update(
     { completed },
     {
-      where: { id },
-      returning: true,
+      where: { id }
     }
   );
-  console.log(2);
-  return numRows === 0 ? null : updatedTodo;
+  return numRows > 0;
 }
 
 export const deleteTodo = async (id: number): Promise<boolean> => {
