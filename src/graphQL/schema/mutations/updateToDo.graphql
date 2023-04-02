@@ -8,5 +8,6 @@ input updateToDoInput {
 }
 
 type updateToDoOutput {
-    success: Boolean
+    success: Boolean!
+    error: String
 }

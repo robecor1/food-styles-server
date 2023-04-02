@@ -16,7 +16,8 @@ export type Scalars = {
 
 export type CreateToDoOutput = {
   __typename?: 'CreateToDoOutput';
-  success?: Maybe<Scalars['Boolean']>;
+  error?: Maybe<Scalars['String']>;
+  success: Scalars['Boolean'];
 };
 
 export type ListToDoInput = {
@@ -71,7 +72,8 @@ export type CreateToDoInput = {
 
 export type DeleteToDoOutput = {
   __typename?: 'deleteToDoOutput';
-  success?: Maybe<Scalars['Boolean']>;
+  error?: Maybe<Scalars['String']>;
+  success: Scalars['Boolean'];
 };
 
 export type UpdateToDoInput = {
@@ -81,7 +83,8 @@ export type UpdateToDoInput = {
 
 export type UpdateToDoOutput = {
   __typename?: 'updateToDoOutput';
-  success?: Maybe<Scalars['Boolean']>;
+  error?: Maybe<Scalars['String']>;
+  success: Scalars['Boolean'];
 };
 
 
@@ -185,7 +188,8 @@ export type ResolversParentTypes = {
 };
 
 export type CreateToDoOutputResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateToDoOutput'] = ResolversParentTypes['CreateToDoOutput']> = {
-  success?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
+  error?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  success?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
@@ -210,12 +214,14 @@ export type ToDoResolvers<ContextType = any, ParentType extends ResolversParentT
 };
 
 export type DeleteToDoOutputResolvers<ContextType = any, ParentType extends ResolversParentTypes['deleteToDoOutput'] = ResolversParentTypes['deleteToDoOutput']> = {
-  success?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
+  error?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  success?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
 export type UpdateToDoOutputResolvers<ContextType = any, ParentType extends ResolversParentTypes['updateToDoOutput'] = ResolversParentTypes['updateToDoOutput']> = {
-  success?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
+  error?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  success?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
