@@ -1,3 +1,7 @@
 type Query {
-    listTodos: [ToDo]
+    listTodos(input: ListToDoInput): [ToDo]
+}
+
+input ListToDoInput {
+    completed: Boolean
 }
