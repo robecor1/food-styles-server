@@ -1,0 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DATABASE_FILE_NAME = void 0;
+//Placeholder for env parameters
+exports.DATABASE_FILE_NAME = "./data/todos.sqlite";
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZW52LmpzIiwic291cmNlUm9vdCI6Ii8iLCJzb3VyY2VzIjpbIi4uL2Vudi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSxnQ0FBZ0M7QUFDbkIsUUFBQSxrQkFBa0IsR0FBRyxxQkFBcUIsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbIi8vUGxhY2Vob2xkZXIgZm9yIGVudiBwYXJhbWV0ZXJzXG5leHBvcnQgY29uc3QgREFUQUJBU0VfRklMRV9OQU1FID0gXCIuL2RhdGEvdG9kb3Muc3FsaXRlXCIiXX0=

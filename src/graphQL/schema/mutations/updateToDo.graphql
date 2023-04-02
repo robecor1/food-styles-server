@@ -3,9 +3,11 @@ type Mutation {
 }
 
 input updateToDoInput {
+    id: ID
     completed: Boolean!
 }
 
 type updateToDoOutput {
-    success: Boolean
+    success: Boolean!
+    error: String
 }

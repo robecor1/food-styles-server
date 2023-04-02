@@ -3,5 +3,6 @@ type Mutation {
 }
 
 type deleteToDoOutput {
-    success: Boolean
+    success: Boolean!
+    error: String
 }
