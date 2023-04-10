@@ -1,10 +1,12 @@
 import {schema} from '../graphQL/schema'
 import {controller} from '../graphQL/controller'
 
+const cors = require('cors')
 const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
 const app = express();
 
+app.use(cors())
 app.use(
   '/graphql',
   graphqlHTTP({
